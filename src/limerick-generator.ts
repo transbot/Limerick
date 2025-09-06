@@ -93,7 +93,7 @@ const chineseTemplatesAO = [
   ],
   [
     "有个{adjective}的{person}{rhyme1}，",
-    "整天想着{dream}的模{rhyme2}。",
+    "整天想着{dream}很{rhyme2}。",
     "{action1}又{action2}，",
     "{feeling1}变{feeling2}，",
     "终于实现了心中的{rhyme3}！"
