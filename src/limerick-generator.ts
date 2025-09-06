@@ -102,46 +102,57 @@ const chineseTemplatesAO = [
     "村里有位{person}大妈，",
     "种的{plant}开满了花。",
     "{color1}的{flower1}，",
-    "村里有位{person}大{rhyme1}，",
-    "种的{plant}开满了{rhyme2}。",
+    "{color2}的{flower2}，",
+    "美得邻居都夸她是仙{rhyme3}！"
   ],
   [
-    "美得邻居都夸她是仙{rhyme3}！"
-    "每日{work}乐逍遥。",
-    "{tool1}配{tool2}，",
     "有位{profession}本事{rhyme1}，",
     "每日{work}不辞{rhyme2}。",
+    "{tool1}配{tool2}，",
+    "{skill1}加{skill2}，",
+    "手艺精湛人人{rhyme3}！"
   ],
   [
-    "手艺精湛人人{rhyme3}！"
-    "院里种满{flower}花。",
+    "小镇住着{person}真{rhyme1}，",
+    "院里种满{flower}{rhyme2}。",
+    "{season1}时{action1}，",
+    "{season2}便{action2}，",
+    "四季美景人人{rhyme3}！"
+  ],
+  [
+    "从前有个{adjective}{rhyme1}，",
+    "最爱{hobby}不回{rhyme2}。",
+    "{morning}就{action1}，",
+    "{evening}便{action2}，",
+    "快乐得像{animal}飞翔{rhyme3}！"
+  ]
 ];
 
 const chineseTemplatesEI = [
-    "{season1}时{action1}，",
-    "小镇住着{person}真{rhyme1}，",
-    "院里种满{flower}{rhyme2}。",
+  [
+    "村中有位{person}{rhyme1}，",
+    "养了一群{animal}{rhyme2}。",
+    "{color1}的{type1}，",
+    "{color2}的{type2}，",
+    "个个都会{skill}{rhyme3}！"
   ],
   [
-    "四季美景人人{rhyme3}！"
-    "最爱{hobby}不回家。",
-    "{morning}就{action1}，",
-    "从前有个{adjective}{rhyme1}，",
-    "最爱{hobby}不回{rhyme2}。",
-  ],
-  [
-    "快乐得像{animal}飞翔{rhyme3}！"
-    "养了一群{animal}虫。",
+    "院子里有{person}{rhyme1}，",
+    "每天忙着{work}{rhyme2}。",
+    "{tool1}和{tool2}，",
+    "{material1}配{material2}，",
+    "作品精美人人{rhyme3}！"
+  ]
 ];
 
 const chineseTemplatesONG = [
-    "{color1}的{type1}，",
+  [
     "村中有位{person}{rhyme1}，",
     "养了一群{animal}{rhyme2}。",
-  ]
-];
+    "{color1}的{type1}，",
+    "{color2}的{type2}，",
     "个个都会{skill}{rhyme3}！"
-const chineseTemplatesANG = [
+  ]
 ];
 
 // Word banks for English templates
