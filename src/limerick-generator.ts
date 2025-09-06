@@ -120,8 +120,8 @@ const chineseTemplatesAO = [
     "四季美景人人{rhyme3}！"
   ],
   [
-    "从前有个{adjective}{rhyme1}，",
-    "最爱{hobby}不回{rhyme2}。",
+    "从前有个{adjective}的{person}真{rhyme1}，",
+    "最爱{hobby}从不觉{rhyme2}。",
     "{morning}就{action1}，",
     "{evening}便{action2}，",
     "快乐得像{animal}飞翔{rhyme3}！"
