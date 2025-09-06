@@ -69,70 +69,79 @@ const englishTemplates = [
 ];
 
 // Chinese limerick templates
-const chineseTemplates = [
+const chineseTemplatesAO = [
   [
-    "有个{person}胡子长，",
-    "他说：\"{quote}真让人恐慌！\"",
+    "有个{person}胡子{rhyme1}，",
+    "他说：\"{quote}真让人{rhyme2}！\"",
     "一只{animal1}，",
     "两只{animal2}，",
-    "全把窝做在我的胡子上！"
+    "全把窝做在我的胡子{rhyme3}！"
   ],
   [
-    "从前有位{person}很{adjective}，",
-    "每天都要{action}忙不停。",
+    "从前有位{person}很{rhyme1}，",
+    "每天都要{action}真{rhyme2}。",
     "{thing1}和{thing2}，",
     "{thing3}配{thing4}，",
-    "生活过得真是太{feeling}！"
+    "生活过得真是太{rhyme3}！"
   ],
   [
-    "小城里住着{person}一位，",
-    "最爱{hobby}从不觉累。",
+    "小城里住着{person}真{rhyme1}，",
+    "最爱{hobby}从不觉{rhyme2}。",
     "{time}就{action1}，",
     "{season}便{action2}，",
-    "快乐得像{animal}飞翔腿！"
+    "快乐得像{animal}飞翔{rhyme3}！"
   ],
   [
-    "有个{adjective}的{person}郎，",
-    "整天想着{dream}的模样。",
+    "有个{adjective}的{person}{rhyme1}，",
+    "整天想着{dream}的模{rhyme2}。",
     "{action1}又{action2}，",
     "{feeling1}变{feeling2}，",
-    "终于实现了心中的{hope}！"
+    "终于实现了心中的{rhyme3}！"
   ],
   [
     "村里有位{person}大妈，",
     "种的{plant}开满了花。",
     "{color1}的{flower1}，",
-    "{color2}的{flower2}，",
-    "美得邻居都夸她是仙家！"
+    "村里有位{person}大{rhyme1}，",
+    "种的{plant}开满了{rhyme2}。",
   ],
   [
-    "有位{profession}技艺高，",
+    "美得邻居都夸她是仙{rhyme3}！"
     "每日{work}乐逍遥。",
     "{tool1}配{tool2}，",
-    "{skill1}加{skill2}，",
-    "名声远播到{place}！"
+    "有位{profession}本事{rhyme1}，",
+    "每日{work}不辞{rhyme2}。",
   ],
   [
-    "小镇住着{person}一家，",
+    "手艺精湛人人{rhyme3}！"
     "院里种满{flower}花。",
+];
+
+const chineseTemplatesEI = [
     "{season1}时{action1}，",
-    "{season2}便{action2}，",
-    "四季美景人人夸！"
+    "小镇住着{person}真{rhyme1}，",
+    "院里种满{flower}{rhyme2}。",
   ],
   [
-    "从前有个{adjective}娃，",
+    "四季美景人人{rhyme3}！"
     "最爱{hobby}不回家。",
     "{morning}就{action1}，",
-    "{evening}才{action2}，",
-    "快乐得像{animal}飞翔啦！"
+    "从前有个{adjective}{rhyme1}，",
+    "最爱{hobby}不回{rhyme2}。",
   ],
   [
-    "村中有位{person}翁，",
+    "快乐得像{animal}飞翔{rhyme3}！"
     "养了一群{animal}虫。",
+];
+
+const chineseTemplatesONG = [
     "{color1}的{type1}，",
-    "{color2}的{type2}，",
-    "个个都会{skill}功！"
+    "村中有位{person}{rhyme1}，",
+    "养了一群{animal}{rhyme2}。",
   ]
+];
+    "个个都会{skill}{rhyme3}！"
+const chineseTemplatesANG = [
 ];
 
 // Word banks for English templates
@@ -191,10 +200,13 @@ const englishWords = {
   price: ['spice', 'nice', 'dice', 'twice', 'ice']
 };
 
-// Word banks for Chinese templates
-const chineseWords = {
+// Chinese rhyme groups - organized by final sound
+const chineseRhymesAO = {
+  rhyme1: ['高', '豪', '好', '老', '小', '巧'],
+  rhyme2: ['遥', '娇', '妙', '少', '早', '跳'],
+  rhyme3: ['牢', '糟', '包', '抱', '找', '笑'],
   person: ['老头儿', '小伙子', '大爷', '姑娘', '先生', '太太', '书生', '农夫'],
-  quote: ['这事儿', '那东西', '这情况', '那场面', '这景象', '那模样'],
+  quote: ['这事儿', '那东西', '这情况', '那场面', '这景象'],
   animal1: ['母鸡', '野鸭', '麻雀', '喜鹊', '燕子', '布谷鸟'],
   animal2: ['猫头鹰', '百灵鸟', '夜莺', '金丝雀', '鹦鹉', '啄木鸟'],
   adjective: ['聪明', '勤劳', '善良', '有趣', '机灵', '能干'],
@@ -203,7 +215,6 @@ const chineseWords = {
   thing2: ['茶杯', '鲜花', '纸张', '砚台', '棋盘', '琴弦'],
   thing3: ['诗词', '书法', '音乐', '绘画', '舞蹈', '戏曲'],
   thing4: ['歌赋', '文章', '节拍', '色彩', '身段', '唱腔'],
-  feeling: ['开心', '满足', '充实', '愉快', '舒心', '惬意'],
   hobby: ['下棋', '钓鱼', '养花', '练字', '弹琴', '画画'],
   time: ['清晨', '上午', '中午', '下午', '傍晚', '夜里'],
   action1: ['练功', '读书', '写字', '画画', '唱歌', '跳舞'],
@@ -213,7 +224,13 @@ const chineseWords = {
   dream: ['成功', '幸福', '美好', '理想', '愿望', '梦想'],
   feeling1: ['忧愁', '烦恼', '困惑', '迷茫', '焦虑', '不安'],
   feeling2: ['欢喜', '快乐', '开心', '满足', '安心', '舒畅'],
-  hope: ['理想', '愿望', '梦想', '希望', '目标', '追求'],
+  hope: ['理想', '愿望', '梦想', '希望', '目标', '追求']
+};
+
+const chineseRhymesANG = {
+  rhyme1: ['强', '长', '忙', '香', '亮', '旺'],
+  rhyme2: ['慌', '黄', '王', '光', '方', '场'],
+  rhyme3: ['夸', '花', '家', '华', '茶', '霞'],
   plant: ['牡丹', '玫瑰', '茉莉', '桂花', '荷花', '菊花'],
   flower1: ['牡丹', '玫瑰', '月季', '海棠', '芍药', '蔷薇'],
   flower2: ['茉莉', '桂花', '兰花', '菊花', '梅花', '荷花'],
@@ -224,12 +241,23 @@ const chineseWords = {
   tool1: ['锤子', '剪刀', '画笔', '乐器', '针线', '刻刀'],
   tool2: ['钉子', '布料', '颜料', '琴弦', '丝线', '木料'],
   skill1: ['巧手', '妙思', '细心', '专注', '耐心', '创意'],
-  skill2: ['匠心', '灵感', '技艺', '功夫', '手艺', '天赋'],
-  place: ['京城', '江南', '塞北', '关外', '海外', '天涯'],
+  skill2: ['匠心', '灵感', '技艺', '功夫', '手艺', '天赋']
+};
+
+const chineseRhymesEI = {
+  rhyme1: ['美', '贵', '累', '醉', '对', '配'],
+  rhyme2: ['飞', '归', '回', '追', '陪', '堆'],
+  rhyme3: ['夸', '花', '家', '华', '茶', '霞'],
   season1: ['春日', '夏天', '秋季', '冬月', '雨天', '晴日'],
   season2: ['秋天', '冬日', '春季', '夏月', '雪天', '阴日'],
   morning: ['清晨', '早上', '黎明', '日出', '晨光', '破晓'],
-  evening: ['黄昏', '傍晚', '日落', '夕阳', '暮色', '夜幕'],
+  evening: ['黄昏', '傍晚', '日落', '夕阳', '暮色', '夜幕']
+};
+
+const chineseRhymesONG = {
+  rhyme1: ['翁', '公', '雄', '红', '东', '中'],
+  rhyme2: ['虫', '龙', '风', '空', '穷', '丰'],
+  rhyme3: ['功', '工', '通', '同', '从', '松'],
   type1: ['蝴蝶', '蜜蜂', '蜻蜓', '萤火虫', '知了', '蟋蟀'],
   type2: ['蚂蚱', '螳螂', '瓢虫', '金龟子', '天牛', '蚕宝宝'],
   skill: ['唱歌', '跳舞', '变色', '发光', '飞翔', '爬树']
@@ -256,7 +284,16 @@ export function generateLimerick(language: Language): string[] {
     const template = getRandomElement(englishTemplates);
     return fillTemplate(template, englishWords);
   } else {
-    const template = getRandomElement(chineseTemplates);
-    return fillTemplate(template, chineseWords);
+    // Randomly select a rhyme group and corresponding template
+    const rhymeGroups = [
+      { templates: chineseTemplatesAO, words: chineseRhymesAO },
+      { templates: chineseTemplatesANG, words: chineseRhymesANG },
+      { templates: chineseTemplatesEI, words: chineseRhymesEI },
+      { templates: chineseTemplatesONG, words: chineseRhymesONG }
+    ];
+    
+    const selectedGroup = getRandomElement(rhymeGroups);
+    const template = getRandomElement(selectedGroup.templates);
+    return fillTemplate(template, selectedGroup.words);
   }
 }
