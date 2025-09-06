@@ -298,7 +298,6 @@ export function generateLimerick(language: Language): string[] {
     // Randomly select a rhyme group and corresponding template
     const rhymeGroups = [
       { templates: chineseTemplatesAO, words: chineseRhymesAO },
-      { templates: chineseTemplatesANG, words: chineseRhymesANG },
       { templates: chineseTemplatesEI, words: chineseRhymesEI },
       { templates: chineseTemplatesONG, words: chineseRhymesONG }
     ];
