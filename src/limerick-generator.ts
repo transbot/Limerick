@@ -37,6 +37,34 @@ const englishTemplates = [
     "It would {action1}",
     "And {action2} with glee",
     "Living life so wild and so {free}"
+  ],
+  [
+    "There once was a {person} so {bright}",
+    "Who stayed up to read every {night}",
+    "With {book} in their {hand}",
+    "They'd {understand}",
+    "And wake up with knowledge so {light}"
+  ],
+  [
+    "A {musician} from old {city}",
+    "Played songs that were {pretty}",
+    "With {instrument} so {fine}",
+    "They'd {shine}",
+    "Making music both {witty}"
+  ],
+  [
+    "There lived a young {artist} named {kate}",
+    "Who painted from morning till {late}",
+    "With {colors} so {bold}",
+    "Stories {told}",
+    "Their art was considered first-{rate}"
+  ],
+  [
+    "A {chef} who loved cooking with {spice}",
+    "Made dishes that tasted so {nice}",
+    "They'd {chop} and they'd {dice}",
+    "Not once but {twice}",
+    "Creating meals worth any {price}"
   ]
 ];
 
@@ -76,6 +104,34 @@ const chineseTemplates = [
     "{color1}的{flower1}，",
     "{color2}的{flower2}，",
     "美得邻居都夸她是仙家！"
+  ],
+  [
+    "有位{profession}技艺高，",
+    "每日{work}乐逍遥。",
+    "{tool1}配{tool2}，",
+    "{skill1}加{skill2}，",
+    "名声远播到{place}！"
+  ],
+  [
+    "小镇住着{person}一家，",
+    "院里种满{flower}花。",
+    "{season1}时{action1}，",
+    "{season2}便{action2}，",
+    "四季美景人人夸！"
+  ],
+  [
+    "从前有个{adjective}娃，",
+    "最爱{hobby}不回家。",
+    "{morning}就{action1}，",
+    "{evening}才{action2}，",
+    "快乐得像{animal}飞翔啦！"
+  ],
+  [
+    "村中有位{person}翁，",
+    "养了一群{animal}虫。",
+    "{color1}的{type1}，",
+    "{color2}的{type2}，",
+    "个个都会{skill}功！"
   ]
 ];
 
@@ -105,7 +161,34 @@ const englishWords = {
   twinkle: ['wrinkle', 'sprinkle', 'crinkle', 'tinkle'],
   creature: ['teacher', 'preacher', 'feature', 'nature'],
   sea: ['free', 'tree', 'spree', 'key', 'glee'],
-  free: ['sea', 'tree', 'spree', 'key', 'glee']
+  free: ['sea', 'tree', 'spree', 'key', 'glee'],
+  bright: ['night', 'light', 'sight', 'height', 'flight'],
+  night: ['bright', 'light', 'sight', 'height', 'flight'],
+  book: ['look', 'took', 'cook', 'hook', 'brook'],
+  hand: ['land', 'band', 'stand', 'grand', 'planned'],
+  understand: ['command', 'demand', 'expand', 'withstand'],
+  light: ['bright', 'night', 'sight', 'height', 'flight'],
+  musician: ['magician', 'technician', 'physician', 'politician'],
+  city: ['pretty', 'witty', 'gritty', 'committee'],
+  pretty: ['city', 'witty', 'gritty', 'committee'],
+  instrument: ['monument', 'document', 'ornament', 'element'],
+  fine: ['shine', 'line', 'wine', 'mine', 'pine'],
+  shine: ['fine', 'line', 'wine', 'mine', 'pine'],
+  witty: ['city', 'pretty', 'gritty', 'committee'],
+  artist: ['smartest', 'hardest', 'largest', 'sharpest'],
+  kate: ['late', 'rate', 'gate', 'fate', 'state'],
+  late: ['kate', 'rate', 'gate', 'fate', 'state'],
+  colors: ['dollars', 'scholars', 'collars', 'hollers'],
+  bold: ['told', 'gold', 'old', 'cold', 'sold'],
+  told: ['bold', 'gold', 'old', 'cold', 'sold'],
+  rate: ['kate', 'late', 'gate', 'fate', 'state'],
+  chef: ['deaf', 'ref', 'clef', 'jeff', 'chef'],
+  spice: ['nice', 'price', 'dice', 'twice', 'ice'],
+  nice: ['spice', 'price', 'dice', 'twice', 'ice'],
+  chop: ['stop', 'top', 'drop', 'shop', 'hop'],
+  dice: ['spice', 'nice', 'price', 'twice', 'ice'],
+  twice: ['spice', 'nice', 'price', 'dice', 'ice'],
+  price: ['spice', 'nice', 'dice', 'twice', 'ice']
 };
 
 // Word banks for Chinese templates
@@ -135,7 +218,21 @@ const chineseWords = {
   flower1: ['牡丹', '玫瑰', '月季', '海棠', '芍药', '蔷薇'],
   flower2: ['茉莉', '桂花', '兰花', '菊花', '梅花', '荷花'],
   color1: ['红色', '粉色', '紫色', '白色', '黄色', '蓝色'],
-  color2: ['白色', '粉色', '紫色', '红色', '黄色', '蓝色']
+  color2: ['白色', '粉色', '紫色', '红色', '黄色', '蓝色'],
+  profession: ['木匠', '铁匠', '裁缝', '厨师', '画师', '乐师'],
+  work: ['干活', '创作', '练习', '钻研', '琢磨', '忙碌'],
+  tool1: ['锤子', '剪刀', '画笔', '乐器', '针线', '刻刀'],
+  tool2: ['钉子', '布料', '颜料', '琴弦', '丝线', '木料'],
+  skill1: ['巧手', '妙思', '细心', '专注', '耐心', '创意'],
+  skill2: ['匠心', '灵感', '技艺', '功夫', '手艺', '天赋'],
+  place: ['京城', '江南', '塞北', '关外', '海外', '天涯'],
+  season1: ['春日', '夏天', '秋季', '冬月', '雨天', '晴日'],
+  season2: ['秋天', '冬日', '春季', '夏月', '雪天', '阴日'],
+  morning: ['清晨', '早上', '黎明', '日出', '晨光', '破晓'],
+  evening: ['黄昏', '傍晚', '日落', '夕阳', '暮色', '夜幕'],
+  type1: ['蝴蝶', '蜜蜂', '蜻蜓', '萤火虫', '知了', '蟋蟀'],
+  type2: ['蚂蚱', '螳螂', '瓢虫', '金龟子', '天牛', '蚕宝宝'],
+  skill: ['唱歌', '跳舞', '变色', '发光', '飞翔', '爬树']
 };
 
 function getRandomElement<T>(array: T[]): T {
