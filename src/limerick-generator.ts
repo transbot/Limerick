@@ -128,6 +128,31 @@ const chineseTemplatesAO = [
   ]
 ];
 
+// 双字词押韵模板 - AO韵
+const chineseTemplatesAODouble = [
+  [
+    "村里有个{person}{rhyme1}，",
+    "每天忙着{work}{rhyme2}。",
+    "{tool1}和{tool2}，",
+    "{skill1}配{skill2}，",
+    "邻居都说他手艺{rhyme3}！"
+  ],
+  [
+    "从前有位{person}{rhyme1}，",
+    "最爱{hobby}真{rhyme2}。",
+    "{time1}就{action1}，",
+    "{time2}便{action2}，",
+    "生活过得特别{rhyme3}！"
+  ],
+  [
+    "小镇住着{person}{rhyme1}，",
+    "种花养草很{rhyme2}。",
+    "{flower1}配{flower2}，",
+    "{color1}映{color2}，",
+    "四季风景都{rhyme3}！"
+  ]
+];
+
 const chineseTemplatesEI = [
   [
     "村中有位{person}{rhyme1}，",
@@ -145,6 +170,24 @@ const chineseTemplatesEI = [
   ]
 ];
 
+// 双字词押韵模板 - EI韵
+const chineseTemplatesEIDouble = [
+  [
+    "村中有个{person}{rhyme1}，",
+    "养花种草很{rhyme2}。",
+    "{flower1}和{flower2}，",
+    "{season1}配{season2}，",
+    "四季美景都很{rhyme3}！"
+  ],
+  [
+    "从前有位{person}{rhyme1}，",
+    "手艺精湛真{rhyme2}。",
+    "{tool1}配{tool2}，",
+    "{work1}加{work2}，",
+    "作品个个都{rhyme3}！"
+  ]
+];
+
 const chineseTemplatesONG = [
   [
     "村中有位{person}{rhyme1}，",
@@ -152,6 +195,17 @@ const chineseTemplatesONG = [
     "{color1}的{type1}，",
     "{color2}的{type2}，",
     "个个都会{skill}{rhyme3}！"
+  ]
+];
+
+// 双字词押韵模板 - ONG韵
+const chineseTemplatesONGDouble = [
+  [
+    "村里住着{person}{rhyme1}，",
+    "每天工作很{rhyme2}。",
+    "{morning}就{action1}，",
+    "{evening}便{action2}，",
+    "生活过得真{rhyme3}！"
   ]
 ];
 
@@ -254,6 +308,28 @@ const chineseRhymesAO = {
   evening: ['黄昏', '傍晚', '日落', '夕阳', '暮色', '夜幕']
 };
 
+// 双字词押韵词库 - AO韵
+const chineseRhymesAODouble = {
+  rhyme1: ['很好', '真高', '挺巧', '太小', '极老', '特豪'],
+  rhyme2: ['美妙', '奇妙', '灵巧', '很少', '挺早', '能跳'],
+  rhyme3: ['很好', '挺高', '真巧', '不少', '挺早', '会跳'],
+  person: ['老头儿', '小伙子', '大爷', '姑娘', '先生', '太太', '书生', '农夫'],
+  work: ['干活', '创作', '练习', '钻研', '琢磨', '忙碌'],
+  tool1: ['锤子', '剪刀', '画笔', '乐器', '针线', '刻刀'],
+  tool2: ['钉子', '布料', '颜料', '琴弦', '丝线', '木料'],
+  skill1: ['巧手', '妙思', '细心', '专注', '耐心', '创意'],
+  skill2: ['匠心', '灵感', '技艺', '功夫', '手艺', '天赋'],
+  hobby: ['下棋', '钓鱼', '养花', '练字', '弹琴', '画画'],
+  time1: ['清晨', '上午', '中午', '下午', '傍晚', '夜里'],
+  time2: ['早上', '午后', '黄昏', '深夜', '黎明', '夕阳'],
+  action1: ['练功', '读书', '写字', '画画', '唱歌', '跳舞'],
+  action2: ['赏花', '避暑', '登高', '围炉', '听雨', '踏雪'],
+  flower1: ['牡丹', '玫瑰', '月季', '海棠', '芍药', '蔷薇'],
+  flower2: ['茉莉', '桂花', '兰花', '菊花', '梅花', '荷花'],
+  color1: ['红色', '粉色', '紫色', '白色', '黄色', '蓝色'],
+  color2: ['白色', '粉色', '紫色', '红色', '黄色', '蓝色']
+};
+
 const chineseRhymesEI = {
   rhyme1: ['美', '贵', '累', '醉', '对', '配'],
   rhyme2: ['飞', '归', '回', '追', '陪', '堆'],
@@ -276,6 +352,22 @@ const chineseRhymesEI = {
   evening: ['黄昏', '傍晚', '日落', '夕阳', '暮色', '夜幕']
 };
 
+// 双字词押韵词库 - EI韵
+const chineseRhymesEIDouble = {
+  rhyme1: ['很美', '真贵', '太累', '半醉', '成对', '相配'],
+  rhyme2: ['能飞', '要归', '会回', '去追', '来陪', '成堆'],
+  rhyme3: ['有威', '显微', '放辉', '能挥', '围围', '可推'],
+  person: ['老头儿', '小伙子', '大爷', '姑娘', '先生', '太太'],
+  flower1: ['牡丹', '玫瑰', '月季', '海棠', '芍药', '蔷薇'],
+  flower2: ['茉莉', '桂花', '兰花', '菊花', '梅花', '荷花'],
+  season1: ['春日', '夏天', '秋季', '冬月', '雨天', '晴日'],
+  season2: ['秋天', '冬日', '春季', '夏月', '雪天', '阴日'],
+  tool1: ['锤子', '剪刀', '画笔', '乐器', '针线', '刻刀'],
+  tool2: ['钉子', '布料', '颜料', '琴弦', '丝线', '木料'],
+  work1: ['雕刻', '绘画', '弹琴', '写字', '刺绣', '制作'],
+  work2: ['打磨', '上色', '调音', '装裱', '缝制', '修饰']
+};
+
 const chineseRhymesONG = {
   rhyme1: ['翁', '公', '雄', '红', '东', '中'],
   rhyme2: ['虫', '龙', '风', '空', '穷', '丰'],
@@ -287,6 +379,18 @@ const chineseRhymesONG = {
   color1: ['红色', '黄色', '绿色', '蓝色', '紫色', '黑色'],
   color2: ['白色', '粉色', '橙色', '青色', '棕色', '灰色'],
   skill: ['唱歌', '跳舞', '变色', '发光', '飞翔', '爬树']
+};
+
+// 双字词押韵词库 - ONG韵
+const chineseRhymesONGDouble = {
+  rhyme1: ['很红', '真雄', '太公', '老翁', '向东', '在中'],
+  rhyme2: ['成虫', '如龙', '起风', '很空', '太穷', '真丰'],
+  rhyme3: ['有功', '做工', '相通', '相同', '跟从', '很松'],
+  person: ['老头儿', '小伙子', '大爷', '姑娘', '先生', '太太'],
+  morning: ['清晨', '早上', '黎明', '日出', '晨光', '破晓'],
+  evening: ['黄昏', '傍晚', '日落', '夕阳', '暮色', '夜幕'],
+  action1: ['练功', '读书', '写字', '画画', '唱歌', '跳舞'],
+  action2: ['赏花', '避暑', '登高', '围炉', '听雨', '踏雪']
 };
 
 function getRandomElement<T>(array: T[]): T {
@@ -310,8 +414,15 @@ export function generateLimerick(language: Language): string[] {
     const template = getRandomElement(englishTemplates);
     return fillTemplate(template, englishWords);
   } else {
-    // Randomly select a rhyme group and corresponding template
-    const rhymeGroups = [
+    // 随机选择单字押韵或双字词押韵
+    const useDoubleRhyme = Math.random() < 0.5;
+    
+    // 根据押韵类型选择对应的模板和词库
+    const rhymeGroups = useDoubleRhyme ? [
+      { templates: chineseTemplatesAODouble, words: chineseRhymesAODouble },
+      { templates: chineseTemplatesEIDouble, words: chineseRhymesEIDouble },
+      { templates: chineseTemplatesONGDouble, words: chineseRhymesONGDouble }
+    ] : [
       { templates: chineseTemplatesAO, words: chineseRhymesAO },
       { templates: chineseTemplatesEI, words: chineseRhymesEI },
       { templates: chineseTemplatesONG, words: chineseRhymesONG }
